@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="9ba050f1c4334e25af17b4457c31f427" Name="Diagram1">
+        <EntityTypeShape EntityType="LeisurePeopleModel.Client" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.Event" Width="1.5" PointX="5.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.Owner" Width="1.5" PointX="5.25" PointY="2.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.Place" Width="1.5" PointX="3" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.Role" Width="1.5" PointX="0.75" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.Stat" Width="1.5" PointX="8.25" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.sysdiagrams" Width="1.5" PointX="7.75" PointY="1.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.TypeEvent" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="LeisurePeopleModel.TypePlace" Width="1.5" PointX="0.75" PointY="5.375" IsExpanded="true" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Client_Role" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Owner_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Stat_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Event_Place" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Event_TypeEvent" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Owner_Place" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Place_TypePlace" ManuallyRouted="false" />
+        <AssociationConnector Association="LeisurePeopleModel.FK_Stat_Place" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
