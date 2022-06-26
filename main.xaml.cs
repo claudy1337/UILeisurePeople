@@ -52,7 +52,7 @@ namespace UIKitTutorials
 
         private void BtnHome_Click(object sender, RoutedEventArgs e)
         {
-            PagesNavigation.Navigate(new System.Uri("Pages/HomePage.xaml", UriKind.RelativeOrAbsolute));
+            PagesNavigation.Navigate(new Pages.HomePage(Client));
         }
     }
 }

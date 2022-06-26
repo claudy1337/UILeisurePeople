@@ -7,6 +7,7 @@
       mc:Ignorable="d" 
       d:DesignHeight="480" d:DesignWidth="800"
       Title="HomePage"
+      FontFamily="Poppins"
       xmlns:material="http://materialdesigninxaml.net/winfx/xaml/themes">
 
     <Border CornerRadius="5" Background="{DynamicResource SecundaryBackgroundColor}">
@@ -28,9 +29,11 @@
                         <RowDefinition Height="350"/>
                     </Grid.RowDefinitions>
                     <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                        <TextBlock Text="Place:" FontSize="30" Margin="0,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <TextBlock Text="0" x:Name="txtOwnerPlace" TextWrapping="Wrap" FontSize="30" Margin="5,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBlock Text="Place:" x:Name="txtPlace" FontSize="30" Margin="0,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
+                        <TextBlock Text="0" x:Name="txtCountPlace" TextWrapping="Wrap" FontSize="30" Margin="5,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
                         <Button
+                        x:Name="BtnShowPlace"
+                        Click="BtnShowPlace_Click"
                         material:ButtonAssist.CornerRadius="5"
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
@@ -70,6 +73,8 @@
                 material:HintAssist.Hint="Email or Phone"/>
 
                         <Button
+                        x:Name="BtnEditContent"
+                        Click="BtnEditContent_Click"
                         material:ButtonAssist.CornerRadius="5"
                         ToolTip="MaterialDesignRaisedLightButton with Round Corners"
                         Style="{StaticResource MaterialDesignRaisedLightButton}"
