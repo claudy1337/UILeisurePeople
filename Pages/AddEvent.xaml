@@ -15,8 +15,7 @@
             <TextBlock Text="Add Event" Grid.Row="0" FontSize="30" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Medium"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
             <TextBox Width="200"
-                x:Name="txtEventName" 
-                IsReadOnly="True"        
+                x:Name="txtEventName"       
                 MaxWidth="200"
                 Margin="0,20,0,0"
                 Style="{StaticResource MaterialDesignOutlinedTextBox}"
@@ -25,18 +24,44 @@
 
             <ComboBox Width="200"
                 SelectionChanged="txtSearch_SelectionChanged"
-                x:Name="txtSearch"
+                x:Name="txtEventType"
                 Margin="0,20,0,0"
                 Style="{DynamicResource MaterialDesignOutlinedComboBox}"
                 DisplayMemberPath="Type"
                 Background="{DynamicResource PrimaryTextColor}"
-                material:HintAssist.Hint="Search"/>
+                material:HintAssist.Hint="Type"/>
 
             <DatePicker Width="200"
+                x:Name="DPDateStart"
+                DisplayDateStart="2022-06-28"
                 Margin="0,20,0,0"
-                Style="{StaticResource MaterialDesignOutlinedDatePicker}"
+                Style="{DynamicResource MaterialDesignOutlinedDatePicker}"
                 Background="{DynamicResource PrimaryTextColor}"
-                material:HintAssist.Hint="Name" Cursor="Arrow"/>
+                material:HintAssist.Hint="Date Start" Cursor="Arrow"/>
+
+            <ComboBox Width="200"
+                x:Name="CBPlace"
+                Margin="0,20,0,0"
+                Style="{DynamicResource MaterialDesignOutlinedComboBox}"
+                DisplayMemberPath="Name"
+                Background="{DynamicResource PrimaryTextColor}"
+                material:HintAssist.Hint="Place"/>
+
+            <Button
+                x:Name="BtnAddEvent"
+                Click="BtnAddEvent_Click"
+                
+                material:ButtonAssist.CornerRadius="5"
+                ToolTip="MaterialDesignRaisedLightButton with Round Corners"
+                Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
+                        Margin="0,20,0,0"
+                        Width="200"
+                        Height="40"
+                        Background="#EB8F4C"
+                        Content="Add"
+                        FontSize="20"
+                        FontFamily="Cascadia Code" Cursor="Hand"/>
         </StackPanel>
     </Border>
 </Page>

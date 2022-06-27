@@ -71,7 +71,7 @@ namespace UIKitTutorials
 
         private void BtnAddEvent_Click(object sender, RoutedEventArgs e)
         {
-
+            PagesNavigation.Navigate(new Pages.AddEvent(Client));
         }
     }
 }

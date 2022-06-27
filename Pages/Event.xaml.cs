@@ -73,6 +73,7 @@ namespace UIKitTutorials.Pages
                 idPlace = place.idPlace,
                 Estimation = Convert.ToInt32(txtEventEstimation.Text)
             };
+            selectEvent.CountSeats -= 1;
             Classes.BD_Connection.bd.Stat.Add(stat);
             Classes.BD_Connection.bd.SaveChanges();
             MessageBox.Show("ty to visit");
