@@ -17,8 +17,7 @@
                 <ColumnDefinition Width="400"/>
             </Grid.ColumnDefinitions>
             <StackPanel Grid.Column="0" Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
-                <Image  x:Name="imgClient"  Width="250" Height="250" RenderOptions.BitmapScalingMode="HighQuality"/>
-
+                <Image   x:Name="imgClient" Source="/Assets/Avatars/user.png"  Width="250" Height="250" RenderOptions.BitmapScalingMode="HighQuality"/>
                 <TextBlock Text="Login" x:Name="txtClientLogin" FontSize="40" Margin="0,20,0,0" Foreground="{DynamicResource PrimaryTextColor}" FontWeight="Bold"
                    VerticalAlignment="Center" HorizontalAlignment="Center"/>
             </StackPanel>
@@ -31,19 +30,7 @@
                     <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBlock Text="Place:" x:Name="txtPlace" FontSize="30" Margin="0,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
                         <TextBlock Text="0" x:Name="txtCountPlace" TextWrapping="Wrap" FontSize="30" Margin="5,0,10,0" Foreground="{DynamicResource PrimaryTextColor}"/>
-                        <Button
-                        x:Name="BtnShowPlace"
-                        Click="BtnShowPlace_Click"
-                        material:ButtonAssist.CornerRadius="5"
-                        ToolTip="MaterialDesignRaisedLightButton with Round Corners"
-                        Style="{StaticResource MaterialDesignRaisedLightButton}"
-                        IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}"
-                        Width="100"
-                        Height="40"
-                        Background="#EB8F4C"
-                        Content="Show"
-                        FontSize="20"
-                        FontFamily="Cascadia Code" Cursor="Hand"/>
+                        
                     </StackPanel>
                     <StackPanel Grid.Row="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
                         <TextBox Width="200"

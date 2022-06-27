@@ -20,6 +20,7 @@ namespace UIKitTutorials.Classes.Model
         public string DateEnd { get; set; }
         public string Name { get; set; }
         public Nullable<int> idPlace { get; set; }
+        public Nullable<int> CountSeats { get; set; }
     
         public virtual Place Place { get; set; }
         public virtual TypeEvent TypeEvent { get; set; }

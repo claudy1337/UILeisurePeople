@@ -29,6 +29,7 @@ namespace UIKitTutorials.Classes.Model
         public Nullable<bool> SeasonalObject { get; set; }
         public Nullable<int> CountSeats { get; set; }
         public string DateStart { get; set; }
+        public Nullable<bool> isClose { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Event> Event { get; set; }

@@ -33,15 +33,15 @@ namespace UIKitTutorials.Pages
             {
                 txtPlace.Visibility = Visibility.Hidden;
                 txtCountPlace.Visibility = Visibility.Hidden;
-                BtnShowPlace.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                 
+                txtCountPlace.Text = Classes.BD_Connection.bd.Owner.Where(o => o.Client.Login == Client.Login).ToList().Count().ToString();
             }
         }
 
-        private void BtnShowPlace_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+        
         private void BtnEditContent_Click(object sender, RoutedEventArgs e)
         {
             try

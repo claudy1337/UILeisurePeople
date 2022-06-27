@@ -42,6 +42,8 @@
   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
 
                 <Button
+  x:Name="BtnPlace"
+  Click="BtnPlace_Click"
   Margin="30,0,0,0"
   Style="{StaticResource MaterialDesignPaperDarkButton}"
   Width="120"
@@ -51,6 +53,8 @@
   Content="Place"
   IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
                 <Button
+  x:Name="BtnEvent"
+  Click="BtnEvent_Click"
   Margin="30,0,0,0"
   Style="{StaticResource MaterialDesignPaperDarkButton}"
   Width="120"
@@ -58,19 +62,12 @@
   material:ButtonAssist.CornerRadius="10"
   ToolTip="Resource name: MaterialDesignPaperDarkButton"
   Content="Event"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Cursor="Hand" />
 
+                
                 <Button
-  Margin="30,0,0,0"
-  Style="{StaticResource MaterialDesignPaperDarkButton}"
-  Width="120"
-  Height="60"
-  material:ButtonAssist.CornerRadius="10"
-  ToolTip="Resource name: MaterialDesignPaperDarkButton"
-  Content="Add Place"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
-
-                <Button
+  x:Name="BtnAddEvent"
+  Click="BtnAddEvent_Click"
   Margin="30,0,0,0"
   Style="{StaticResource MaterialDesignPaperDarkButton}"
   Width="120"
@@ -78,7 +75,7 @@
   material:ButtonAssist.CornerRadius="10"
   ToolTip="Resource name: MaterialDesignPaperDarkButton"
   Content="Add Event"
-  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" />
+  IsEnabled="{Binding DataContext.ControlsEnabled, RelativeSource={RelativeSource FindAncestor, AncestorType=Window}}" Cursor="Hand" />
             </StackPanel>
         </Grid>
     </Border>

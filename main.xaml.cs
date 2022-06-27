@@ -25,6 +25,10 @@ namespace UIKitTutorials
         {
             Client = client;
             InitializeComponent();
+            if (Client.Role == 2)
+            {
+                BtnAddEvent.Visibility = Visibility.Hidden;
+            }
         }
 
         private void Window_MouseDown(object sender, MouseButtonEventArgs e)
@@ -53,6 +57,21 @@ namespace UIKitTutorials
         private void BtnHome_Click(object sender, RoutedEventArgs e)
         {
             PagesNavigation.Navigate(new Pages.HomePage(Client));
+        }
+
+        private void BtnPlace_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new Pages.Place(Client));
+        }
+
+        private void BtnEvent_Click(object sender, RoutedEventArgs e)
+        {
+            PagesNavigation.Navigate(new Pages.Event(Client));
+        }
+
+        private void BtnAddEvent_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

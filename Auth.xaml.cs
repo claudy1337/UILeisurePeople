@@ -53,10 +53,15 @@ namespace UIKitTutorials
             else
             {
                 Classes.Model.Client client = Classes.BD_Connection.bd.Client.FirstOrDefault(c=>c.Login == TxtClienLogin.Text && c.Password == TxtClientPassword.Password);
-                Classes.Client clients = new Classes.Client(client.idClient, client.Name, client.LastName, client.Login, Convert.ToInt32(client.idRole), client.Link);
-                main main = new main(clients);
-                main.Show();
-                this.Close();
+                if (client != null)
+                {
+                    Classes.Client clients = new Classes.Client(client.idClient, client.Name, client.LastName, client.Login, Convert.ToInt32(client.idRole), client.Link);
+                    main main = new main(clients);
+                    main.Show();
+                    this.Close();
+                }
+                else return;
+                
             }
             
         }

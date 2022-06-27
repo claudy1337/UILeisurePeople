@@ -27,6 +27,7 @@
           <Property Name="DateEnd" Type="nvarchar" MaxLength="50" />
           <Property Name="Name" Type="nvarchar(max)" />
           <Property Name="idPlace" Type="int" />
+          <Property Name="CountSeats" Type="int" />
         </EntityType>
         <EntityType Name="Owner">
           <Key>
@@ -47,6 +48,7 @@
           <Property Name="SeasonalObject" Type="bit" />
           <Property Name="CountSeats" Type="int" />
           <Property Name="DateStart" Type="nvarchar" MaxLength="50" />
+          <Property Name="isClose" Type="bit" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -259,6 +261,7 @@
           <Property Name="idPlace" Type="Int32" />
           <NavigationProperty Name="Place" Relationship="Self.FK_Event_Place" FromRole="Event" ToRole="Place" />
           <NavigationProperty Name="TypeEvent" Relationship="Self.FK_Event_TypeEvent" FromRole="Event" ToRole="TypeEvent" />
+          <Property Name="CountSeats" Type="Int32" />
         </EntityType>
         <EntityType Name="Owner">
           <Key>
@@ -285,6 +288,7 @@
           <NavigationProperty Name="Owner" Relationship="Self.FK_Owner_Place" FromRole="Place" ToRole="Owner" />
           <NavigationProperty Name="TypePlace" Relationship="Self.FK_Place_TypePlace" FromRole="Place" ToRole="TypePlace" />
           <NavigationProperty Name="Stat" Relationship="Self.FK_Stat_Place" FromRole="Place" ToRole="Stat" />
+          <Property Name="isClose" Type="Boolean" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -493,6 +497,7 @@
           <EntitySetMapping Name="Event">
             <EntityTypeMapping TypeName="LeisurePeopleModel.Event">
               <MappingFragment StoreEntitySet="Event">
+                <ScalarProperty Name="CountSeats" ColumnName="CountSeats" />
                 <ScalarProperty Name="idEvent" ColumnName="idEvent" />
                 <ScalarProperty Name="idType" ColumnName="idType" />
                 <ScalarProperty Name="DateStart" ColumnName="DateStart" />
@@ -514,6 +519,7 @@
           <EntitySetMapping Name="Place">
             <EntityTypeMapping TypeName="LeisurePeopleModel.Place">
               <MappingFragment StoreEntitySet="Place">
+                <ScalarProperty Name="isClose" ColumnName="isClose" />
                 <ScalarProperty Name="idPlace" ColumnName="idPlace" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Address" ColumnName="Address" />
